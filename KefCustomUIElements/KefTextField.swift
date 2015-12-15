@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable public class KefTextField: UIControl {
     
-    private let textField: UITextField = UITextField()
+    public let textField: UITextField = UITextField()
     
     // MARK: - IB Setable Properties
     @IBInspectable var cornerRadius: CGFloat = 28.0 {
