@@ -15,33 +15,35 @@ import UIKit
 
 @IBDesignable public class KefButton: UIControl {
     
+    var text: String?
+    
     private let button: UIButton = UIButton(type: UIButtonType.Custom)
     
     // MARK: - IB Editable Properties
     @IBInspectable public var title: String = "" {
         didSet { setNeedsLayout() }
     }
-
+    
     @IBInspectable public var titleColor: UIColor = UIColor.blackColor() {
         didSet { setNeedsLayout() }
     }
-
+    
     @IBInspectable public var buttonColor: UIColor = UIColor.clearColor() {
         didSet { setNeedsLayout() }
     }
-
+    
     @IBInspectable public var borderColor: UIColor = UIColor.clearColor() {
         didSet { setNeedsLayout() }
     }
-
+    
     @IBInspectable public var borderWidth: CGFloat = 0.0 {
         didSet { setNeedsLayout() }
     }
-
+    
     @IBInspectable public var cornerRadius: CGFloat = 0.0 {
         didSet { setNeedsLayout() }
     }
-
+    
     // MARK: - Initializers
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -83,6 +85,6 @@ import UIKit
     public func buttonTouchUpInside(control: UIControl,event: AnyObject) {
         sendActionsForControlEvents(UIControlEvents.TouchUpInside)
     }
-
+    
     
 }

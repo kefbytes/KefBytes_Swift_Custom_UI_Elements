@@ -12,6 +12,14 @@ import UIKit
     
     public let textField: UITextField = UITextField()
     
+    public var text:String {
+        get {
+            return textField.text!
+        } set {
+            self.textField.text = newValue
+        }
+    }
+    
     // MARK: - IB Setable Properties
     @IBInspectable var cornerRadius: CGFloat = 28.0 {
         didSet { setNeedsLayout() }

@@ -9,20 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var emailTextField: KefTextField!
+    @IBOutlet weak var textLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        emailTextField.text = "Hannah"
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func buttonTouched(sender: AnyObject) {
+    
+    @IBAction func buttonAction(sender: AnyObject) {
         print("button touched")
+        textLabel.text = emailTextField.text
     }
-
 }
 
